@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Tic Tac Toe</h1>
+
+    <section class="controls">
+      <div class="mode">
+        <label>
+          <input type="radio" name="mode" value="pvp" checked /> Two Players
+        </label>
+        <label>
+          <input type="radio" name="mode" value="ai" /> Single Player (vs AI)
+        </label>
+      </div>
+      <div class="actions">
+        <button id="rematch-btn">Rematch</button>
+        <button id="reset-btn">Reset (clear stats)</button>
+      </div>
+    </section>
+
+    <section class="game">
+      <div id="board" class="board" aria-label="Tic Tac Toe board"></div>
+      <div id="message" class="message">Player X's turn</div>
+    </section>
+
+    <section class="stats">
+      <h2>Stats</h2>
+      <div class="stat-row">X Wins: <span id="x-wins">0</span></div>
+      <div class="stat-row">O Wins: <span id="o-wins">0</span></div>
+      <div class="stat-row">Draws: <span id="draws">0</span></div>
+    </section>
+
+    <footer class="notes">
+      <small>Board state is tracked using an array of 9 elements in <code>script.js</code>.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
